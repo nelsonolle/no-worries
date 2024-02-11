@@ -1,0 +1,272 @@
+body {
+    font-family: "input-mono", monospace;
+    background-color: beige;
+    margin: 0;
+}
+
+/*header*/
+
+.header-container {
+    background-color: rgb(176, 138, 212);
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 6rem;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid grey;
+    box-shadow: 0px 9px 9px rgb(0, 0, 0, 0.69);
+    z-index: 9;
+}
+
+#brand {
+    margin-left: 2rem;
+    font-family: 'Moirai One', system-ui;
+}
+
+.nav-container {
+    display: flex;
+    float: inline-end;
+    margin-right: 2rem;
+}
+
+nav {
+    margin: 1rem 1rem;
+    cursor: pointer;
+}
+
+nav:hover {
+    font-size: 1.1rem;
+    transition: font-size ease-in .123s;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/*banner*/
+
+.banner-container {
+    background-image: url("./mohammad-rahmani-8qEB0fTe9Vw-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    height: 820px;
+    padding-top: 6rem;
+    
+}
+
+.banner-text-box {
+    display: flex;
+    background-color: beige;
+    height: 300px;
+    align-items: center;
+    margin: 9% 9% 9% 9%;
+    border: 2px solid gray;
+    border-radius: 18px;
+    opacity: 0.9;
+    position: relative;
+    box-shadow: 9px 9px 9px rgb(0, 0, 0, 0.69);
+}
+
+.banner-text {
+    text-align: center;
+    margin: 3rem 9rem;
+}
+
+#no-banner {
+    color: rgb(176, 138, 212);
+    font-family: 'Moirai One', system-ui;
+    font-size: 3rem;
+    text-shadow: 3px 3px 3px rgb(0, 0, 0, 0.69);
+}
+
+/*about*/
+
+.about-strip {
+    display: flex;
+}
+
+.about-strip h2 {
+    margin-left: 9rem;
+}
+
+.about-container {
+    display: flex;
+    background-image: url("./jackson-sophat-_t-l5FFH8VA-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 600px;
+    position: static;
+}
+
+.about-text-box {
+    display: flex;
+    background-color: beige;
+    width: 900px;
+    height: 190px;
+    border: 2px solid gray;
+    border-radius: 18px;
+    opacity: 0.9;
+    box-shadow: 9px 9px 9px rgb(0, 0, 0, 0.69);
+    margin: 9% 9% 0 9%;
+    align-items: center;
+    justify-items: center;
+}
+
+.about-text-box p {
+    margin: 3% 3%;
+}
+
+/*the team*/
+
+.team-strip h2{
+    margin-left: 9rem;
+}
+
+.portraits-container {
+    display: flex;
+    background-image: url("./annie-spratt-QckxruozjRg-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 600px;
+    position: static;
+    justify-content: space-around;
+}
+
+.team-box {
+    width: 369px;
+    height: 500px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.portrait {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border: 2px solid gray;
+    border-radius: 18px;
+    box-shadow: 9px 9px 9px rgb(0, 0, 0, 0.69);
+}
+
+.portrait:hover {
+    width: 318px;
+    height: 318px;
+    transition: width ease-in .123s, height ease-in .123s;
+}
+
+img {
+    width: 100%;
+}
+
+.portrait-text {
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+    border: 2px solid gray;
+    border-radius: 18px;
+    box-shadow: 9px 9px 9px rgb(0, 0, 0, 0.69);
+    opacity: 0.9;
+    text-align: center;
+    margin: 9px 9px;
+    min-width: 336px;
+}
+
+.portrait-text h2,
+.portrait-text h3 {
+    margin: 6px 6px;
+}
+
+/*footer*/
+
+.footer-container {
+    width: 100%;
+}
+
+.footer-title {
+    text-align: center;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-info h4 {
+    opacity: 0.69;
+}
+
+/*responsive*/
+
+@media only screen and (max-width: 1080px) {
+    
+    .portrait {
+        width: 150px;
+        height: 150px;
+    }
+
+    .portrait-text {
+        min-width: 169px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    
+    .header-container {
+        justify-content: space-around;
+    }
+
+    #brand {
+        display: none;
+    }
+    
+    .banner-container {
+        justify-content: center;
+        height: 500px;
+    }
+
+    .banner-text-box {
+        width: 90%;
+        justify-content: center;
+    }
+    
+    .banner-text h3 {
+        display: none;
+    }
+
+    .about-strip h2 {
+        margin: 1rem;
+    }
+
+    .about-text-box {
+        height: 360px;
+    }
+
+    .team-strip h2 {
+        margin: 1rem;
+    }
+
+    .portraits-container {
+        height: 1080px;
+        flex-direction: column;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 715px) {
+    .banner-text h3 {
+        display: none;
+    }
+}
